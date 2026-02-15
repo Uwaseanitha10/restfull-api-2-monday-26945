@@ -1,0 +1,83 @@
+# E-Commerce Product API
+
+A comprehensive REST API for managing a product catalog, featuring stock control, price range filtering, and basic pagination.
+
+## Features
+
+* Catalog with Pagination: Browse the product list with support for `page` and `limit` parameters to handle large datasets
+* Price Range Search: Filter products within a specific budget (Minimum and Maximum price)
+* Stock Management:
+  * View only items currently in stock
+  * Use PATCH to update stock levels without modifying other product details
+* Brand & Category Filtering: Organize products by manufacturer or product type
+* Full CRUD: Add, update, and remove products from the catalog
+
+## Getting Started
+
+### Prerequisites
+
+* Java 17 or 21
+* Maven
+* Postman (Required for PATCH and DELETE operations)
+
+### How to Run
+
+1. Navigate to the project folder:
+   ```bash
+   cd question4-ecommerce-api
+   ```
+2. Run the application:
+   ```bash
+   ./mvnw spring-boot:run
+   ```
+3. The API will be available at `http://localhost:8080`
+
+## API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/products` | Get all products (supports `?page=x&limit=y`) |
+| GET | `/api/products/price-range` | Filter by `?min=x&max=y` |
+| GET | `/api/products/in-stock` | Get products with `stockQuantity > 0` |
+| POST | `/api/products` | Add a new product |
+| PATCH | `/api/products/{id}/stock` | Update stock quantity using `?quantity=x` |
+| DELETE | `/api/products/{id}` | Remove product from catalog |
+
+## Sample Request & Response
+
+### 1. Filter by Price Range
+
+**GET** `http://localhost:8080/api/products/price-range?min=100&max=400`
+
+Sample Response:
+```json
+[
+    {
+        "productId": 5,
+        "name": "AirPods Pro",
+        "price": 249.0,
+        "category": "Accessories",
+        "stockQuantity": 100,
+        "brand": "Apple"
+    },
+    {
+        "productId": 6,
+        "name": "Sony WH-1000XM5",
+        "price": 350.0,
+        "category": "Accessories",
+        "stockQuantity": 25,
+        "brand": "Sony"
+    }
+]
+```
+
+### 2. Update Stock (Partial Update)
+
+**PATCH** `http://localhost:8080/api/products/8/stock?quantity=15`
+
+Expected Behavior: Updates only the `stockQuantity` of the Ninja Air Fryer from 0 to 15.
+
+## Project Structure
+
+* **Model**: `com.library.question4ecommerceapi.model`
+* **Controller**: `com.library.question4ecommerceapi.controller`
