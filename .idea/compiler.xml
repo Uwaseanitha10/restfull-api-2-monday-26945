@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="bonus_user_api (1)" />
+        <module name="bonus_user_api" />
+        <module name="bonus_user_api (2)" />
+        <module name="question3-restaurant-api" />
+        <module name="question5-task-api" />
+        <module name="question1-library-api" />
+        <module name="question4-ecommerce-api" />
+        <module name="question2-student-api" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="bonus_user_api" options="-parameters" />
+      <module name="bonus_user_api (1)" options="-parameters" />
+      <module name="question1-library-api" options="-parameters" />
+      <module name="question2-student-api" options="-parameters" />
+      <module name="question3-restaurant-api" options="-parameters" />
+      <module name="question4-ecommerce-api" options="-parameters" />
+      <module name="question5-task-api" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/.history/bonus_user_api/pom_20260215235238.xml" />
+        <option value="$PROJECT_DIR$/.history/bonus_user_api/pom_20260215235329.xml" />
+        <option value="$PROJECT_DIR$/bonus_user_api/pom.xml" />
+        <option value="$PROJECT_DIR$/question5-task-api/pom.xml" />
+        <option value="$PROJECT_DIR$/question1-library-api/pom.xml" />
+        <option value="$PROJECT_DIR$/question2-student-api/pom.xml" />
+        <option value="$PROJECT_DIR$/question4-ecommerce-api/pom.xml" />
+        <option value="$PROJECT_DIR$/question3-restaurant-api/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="21" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
